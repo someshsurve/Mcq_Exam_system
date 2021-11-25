@@ -12,6 +12,7 @@ import { LoginComponent } from './pages/login/login.component';
 import {RouterModule} from "@angular/router";
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatButtonModule,
     RouterModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
