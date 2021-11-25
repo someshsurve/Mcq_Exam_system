@@ -1,6 +1,10 @@
 package com.exam.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
@@ -19,7 +23,23 @@ public class User {
     private boolean enabled = true;
     private String profile;
 
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER,mappedBy = "user")
+    @JsonIgnore
+    private Set<UserRole> userRoles = new HashSet<>();
+
     public User() {
+    }
+
+    public User(long id, String username, String password, String firstName, String lastName, String email, String phone, boolean enabled, String profile) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phone = phone;
+        this.enabled = enabled;
+        this.profile = profile;
     }
 
     public long getId() {
@@ -92,5 +112,13 @@ public class User {
 
     public void setProfile(String profile) {
         this.profile = profile;
+    }
+
+    public Set<UserRole> getUserRoles() {
+        return userRoles;
+    }
+
+    public void setUserRoles(Set<UserRole> userRoles) {
+        this.userRoles = userRoles;
     }
 }
