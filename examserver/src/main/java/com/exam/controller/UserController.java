@@ -5,6 +5,7 @@ import com.exam.entity.User;
 import com.exam.entity.UserRole;
 import com.exam.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashSet;
@@ -46,4 +47,6 @@ public class UserController {
     public void deleteUser(@PathVariable("userId") Long userId) {
         this.userService.deleteUser(userId);
     }
+
+
 }
