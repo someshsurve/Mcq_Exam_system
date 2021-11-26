@@ -13,38 +13,38 @@
 <!--          username-->
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>User Name</mat-label>
-            <input [(ngModel)]="user.username" name="username" matInput placeholder="Enter here">
+            <input required [(ngModel)]="user.username" name="username" matInput placeholder="Enter here">
             <mat-hint>Username must be Unique.</mat-hint>
           </mat-form-field>
 
 <!--          password field-->
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>User Password</mat-label>
-            <input [(ngModel)]="user.password" name="password" type="password" matInput placeholder="Enter here">
+            <input required [(ngModel)]="user.password" name="password" type="password" matInput placeholder="Enter here">
           </mat-form-field>
 
 <!--          first name-->
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>First Name</mat-label>
-            <input [(ngModel)]="user.firstName" name="firstname"  matInput placeholder="Enter here">
+            <input required [(ngModel)]="user.firstName" name="firstname"  matInput placeholder="Enter here">
           </mat-form-field>
 
 <!--          last name-->
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Last Name</mat-label>
-            <input [(ngModel)]="user.lastName" name="lastname"  matInput placeholder="Enter here">
+            <input required [(ngModel)]="user.lastName" name="lastname"  matInput placeholder="Enter here">
           </mat-form-field>
 
 <!--          email-->
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Your Email Address</mat-label>
-            <input [(ngModel)]="user.email" name="email"  type="email" matInput placeholder="Enter here">
+            <input required [(ngModel)]="user.email" name="email"  type="email" matInput placeholder="Enter here">
           </mat-form-field>
 
 <!--          phone-->
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Phone Number</mat-label>
-            <input [(ngModel)]="user.phone" name="phone"  type="number" matInput placeholder="Enter here">
+            <input required [(ngModel)]="user.phone" name="phone"  type="number" matInput placeholder="Enter here">
           </mat-form-field>
 
           <div class="container text-center">
