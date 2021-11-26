@@ -17,6 +17,8 @@ import {HttpClientModule} from "@angular/common/http";
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { HomeComponent } from './pages/home/home.component';
 import {MatCardModule} from "@angular/material/card";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatIconModule} from "@angular/material/icon";
 
 
 @NgModule({
@@ -40,6 +42,8 @@ import {MatCardModule} from "@angular/material/card";
     HttpClientModule,
     MatSnackBarModule,
     MatCardModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
