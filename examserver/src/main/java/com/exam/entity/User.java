@@ -26,7 +26,7 @@ public class User implements UserDetails {
     private boolean enabled = true;
     private String profile;
 
-    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER,mappedBy = "user")
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "user")
     @JsonIgnore
     private Set<UserRole> userRoles = new HashSet<>();
 
@@ -57,6 +57,10 @@ public class User implements UserDetails {
         return username;
     }
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     @Override
     public boolean isAccountNonExpired() {
         return true;
@@ -72,12 +76,12 @@ public class User implements UserDetails {
         return true;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
+        Set<Authority> set = new HashSet<>();
+        this.userRoles.forEach(userRole -> {
+            set.add(new Authority(userRole.getRole().getRoleName()));
+        });
         return null;
     }
 
