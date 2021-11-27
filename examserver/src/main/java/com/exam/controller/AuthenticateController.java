@@ -29,7 +29,7 @@ public class AuthenticateController {
     private JwtUtils jwtUtils;
 
 
-    //Gemerate Token
+    //Generate Token
     @PostMapping("/generate-token")
     public ResponseEntity<?> generateToken(@RequestBody JwtRequest jwtRequest) throws Exception {
         try {
